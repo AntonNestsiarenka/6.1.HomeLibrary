@@ -1,0 +1,4 @@
+User | user123@tut.by | ϐϖπϗΔΗΖΑΐΓΒΝΜ | user
+admin | admin@tut.by | τρψόϋΔΗΖ | administrator
+Anton Nesterenko | antonNes5323@tut.by | ϫπϖϑπϗπϋώϊΔΑΒΕΗΗΜ | user
+TestUser | test@mail.ru | ϔϒπϗϑϜΔΗ | user
