@@ -1,13 +1,13 @@
-package com.company.Utils;
+package com.company.logic;
 
-import com.company.Book.Book;
+import com.company.bean.Book;
 
 import java.util.Date;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class InputUtils {
+public class InputUserLogic {
 
     public static String inputNotEmptyStr(String str, Scanner scanner)
     {

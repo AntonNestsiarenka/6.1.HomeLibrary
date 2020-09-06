@@ -1,9 +1,9 @@
-package com.company.Book;
+package com.company.bean;
 
 import java.util.Arrays;
 import java.util.Objects;
 
-public class Book implements Comparable<Book>{
+public class Book implements Comparable<Book> {
 
     private String name;
     private String[] authors;
@@ -70,7 +70,7 @@ public class Book implements Comparable<Book>{
                 Arrays.toString(authors) + " | Year: " +
                 releaseYear + " | Pages: " +
                 countOfPages + " | " +
-                typeOfBook.toString();
+                typeOfBook;
     }
 
     @Override
@@ -90,11 +90,6 @@ public class Book implements Comparable<Book>{
         int result = Objects.hash(name, releaseYear, countOfPages, typeOfBook);
         result = 31 * result + Arrays.hashCode(authors);
         return result;
-    }
-
-    public void printInfo()
-    {
-        System.out.println(toString());
     }
 
     public enum TypeOfBook {

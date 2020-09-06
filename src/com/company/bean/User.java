@@ -1,4 +1,4 @@
-package com.company.User;
+package com.company.bean;
 
 import java.util.Objects;
 
@@ -6,12 +6,14 @@ public class User {
 
     private String userName;
     private String email;
+    private String password;
     private TypeOfUser typeOfUser;
 
-    public User(String userName, String email, TypeOfUser typeOfUser)
+    public User(String userName, String email, String password, TypeOfUser typeOfUser)
     {
         this.userName = userName;
         this.email = email;
+        this.password = password;
         this.typeOfUser = typeOfUser;
     }
 
@@ -31,6 +33,14 @@ public class User {
         this.email = email;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
     public TypeOfUser getTypeOfUser() {
         return typeOfUser;
     }
@@ -44,14 +54,15 @@ public class User {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return userName.equals(user.userName) &&
-                email.equals(user.email) &&
+        return Objects.equals(userName, user.userName) &&
+                Objects.equals(email, user.email) &&
+                Objects.equals(password, user.password) &&
                 typeOfUser == user.typeOfUser;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(userName, email, typeOfUser);
+        return Objects.hash(userName, email, password, typeOfUser);
     }
 
     public enum TypeOfUser {
